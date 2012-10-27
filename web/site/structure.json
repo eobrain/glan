@@ -5,30 +5,30 @@
         "ed": {},
         "ellie": {},
         "nick": {},
-        "West Addison, Chief, Statistical Programming": {},
-        "Kira Gunther, Senior Research Analyst": {},
-        "Vicky Wheeler, Senior Research Analyst": {},
-        "Aaron Rosenberger, Senior Research Analyst": {},
-        "Mason Smith, Research Analyst": {}
+        "west": {},
+        "kira": {},
+        "vicky": {},
+        "aaron": {},
+        "mason": {}
     },
-    "Projects":{
+    "projects":{
         "balancing": {},
         "electronic": {},
         "factors": {},
-        "Family Resource Center Initiative Evaluation": {},
+        "family": {},
         "hcbs": {},
-        "Needs Assessment for the State Independent Living Council": {},
+        "needs": {},
         "pasrr": {},
-        "Planning and Evaluation for AB1326 and SB701, San Mateo County and San Francisco County Individualized Child Care Subsidy Pilots": {},
+        "ab1326": {},
         "risk": {},
         "santaclara": {},
         "adrc": {},
-        "Violence Prevention and Intervention Initiative and Youth Workforce Development-High Risk Youth Evaluation": {}
+        "violence": {}
     },
-    "Services":{},
-    "Topic Areas":{},
-    "Careers":{
-        "Entry-Level Research Analyst": {}
+    "services":{},
+    "topics":{},
+    "careers":{
+        "entry": {}
     },
-    "About Us":{}
+    "about":{}
 }
