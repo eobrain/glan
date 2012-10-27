@@ -1,8 +1,8 @@
-article {
+article, nav {
     display:none;
     /*background-color: red;*/
 }
-article.current {
+article.current, nav.current {
     display:block;
-   /* background-color: green;*/
+    /*background-color: green;*/
 }    

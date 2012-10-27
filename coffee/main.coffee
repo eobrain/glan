@@ -1,16 +1,17 @@
 $ ->
 
-  $content = $ '#content'
-  $nav     = $ ".nav"
+  $content  = $ '#content'
+  $children = $ '#children'
+  $nav      = $ ".nav"
 
   currentPage = ( ->
     currentPageId = 'home'
 
     changePageTo = (newPageId) ->
-      $('#'+currentPageId).removeClass 'current'
+      $('.page-'+currentPageId).removeClass 'current'
       $('#menu-'+currentPageId).removeClass 'active'
       currentPageId = newPageId
-      $('#'+currentPageId).addClass 'current'
+      $('.page-'+currentPageId).addClass 'current'
       $('#menu-'+currentPageId).addClass 'active'
 
     $(window).on 'hashchange', ->
@@ -23,16 +24,16 @@ $ ->
 
 
   fetchPage = (pageId, children) ->
-    $content.append "<article id='#{pageId}'></article>"
-    $page = $ '#'+pageId
+    $content.append "<article class='page-#{pageId}'></article>"
+    $page = $ '.page-'+pageId
     $.get "site/pages/#{ pageId }.txt", (md) ->
       $page.append markdown.toHTML md
-      list = '<ul>'
+      list = "<nav class='page-#{pageId}'><ul>"
       for childId of children
         do (childId) ->
           list += "<li><a href='##{ childId }'>#{ childId }</a></li>"
-      list += '</ul>'
-      $page.append list
+      list += '</ul></nav>'
+      $children.append list
 
 
 

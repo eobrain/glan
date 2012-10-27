@@ -9,7 +9,7 @@ server: compile
 	cd web; python -m SimpleHTTPServer 4444
 
 deploy: compile
-	s3cmd --config=s3.config '--add-header=Cache-Control:public max-age=60' --acl-public --exclude=\*~ sync web s3://www-s3-staging.missionanalyticsgroup.com
+	s3cmd --config=s3.config '--add-header=Cache-Control:public max-age=60' --acl-public --exclude=\*~ sync web/ s3://www-s3-staging.missionanalyticsgroup.com
 
 dependencies:
 	sudo apt-get install s3cmd coffeescript python
