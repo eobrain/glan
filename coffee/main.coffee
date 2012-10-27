@@ -1,26 +1,23 @@
 $ ->
 
-  #window.History.Adapter.bind window, 'statechange', () ->
-  #  state = window.History.getState()
-  #  window.History.log state.data, state.title, state.url
-
   $content = $ '#content'
   $nav     = $ ".nav"
 
   currentPage = ( ->
     currentPageId = 'home'
 
-    #@setPage = (pageId) ->
-    #  $('#'+currentPageId).css 'display', 'none'
-    #  currentPageId = pageId
-    #  $('#'+currentPageId).css 'display', 'block'
-
-    $(window).on 'hashchange', ->
+    changePageTo = (newPageId) ->
       $('#'+currentPageId).removeClass 'current'
       $('#menu-'+currentPageId).removeClass 'active'
-      currentPageId = window.location.hash.substring 1
+      currentPageId = newPageId
       $('#'+currentPageId).addClass 'current'
       $('#menu-'+currentPageId).addClass 'active'
+
+    $(window).on 'hashchange', ->
+      changePageTo window.location.hash.substring 1
+
+    window.location.hash = '#'+currentPageId
+    changePageTo currentPageId
 
   )()
 
@@ -33,7 +30,7 @@ $ ->
       list = '<ul>'
       for childId of children
         do (childId) ->
-          list += "<li>#{ childId }</li>"
+          list += "<li><a href='##{ childId }'>#{ childId }</a></li>"
       list += '</ul>'
       $page.append list
 
@@ -49,9 +46,6 @@ $ ->
     for childId of home
       do (childId) ->
         ($nav.append "<li><a href='##{ childId }'>#{ childId }</li>").click () ->
-        #($nav.append "<li><a href='#'>#{ childId }</li>").click () ->
-        #  #window.History.pushState {page:childId}, childId, '#'+childId
-        #  window.location.hash = '#'+childId
 
 
   $.getJSON 'site/config.json', (config) ->
