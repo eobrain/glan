@@ -1,0 +1,8 @@
+article {
+    display:none;
+    /*background-color: red;*/
+}
+article.current {
+    display:block;
+   /* background-color: green;*/
+}    

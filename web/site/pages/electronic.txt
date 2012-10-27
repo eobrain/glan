@@ -1,0 +1,6 @@
+Electronic Data Collection, Storage and Retrieval: National Training and Technical Assistance Cooperative Agreement (HIV/AIDS)
+========================================================================
+
+Client: HIV/AIDS Bureau, Health Resources and Services Administration (HRSA/HAB)
+
+Mission Analytics Group, as a subgrantee to Cicatelli & Associates, provides technical assistance to Ryan White grantees to support and improve the collection, storage, and retrieval of client level data for program reporting, evaluation, and quality improvement purposes. Project activities include designing and hosting a webcast series on data issues, producing and developing grantee data completeness reports, identifying solutions for grantees experiencing data collection and submission challenges, and developing tools to facilitate high quality data submission across grantees and providers.   Many of our TA products are featured on the Ryan White Services Report page of the TARGET Center website for the Ryan White community, including the X-ERT tool (Xml Extraction and Reporting Tool) and the RSR Training Video Series.  <http://www.careacttarget.org/category/topics/ryan-white-services-report-rsr>.

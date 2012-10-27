@@ -1,0 +1,6 @@
+PASRR Technical Assistance for States (Long-term Care)
+======================================================
+
+Client: Centers for Medicare and Medicaid Services (CMS)
+
+Under subcontract to Truven Health Analytics, Mission Analytics Group provides states and CMS with technical assistance and information to improve the effectiveness of their Preadmission Screening and Resident Review (PASRR) programs. PASRR has three main objectives: to see that individuals who apply to a Medicaid-certified nursing facility (NF) are evaluated for mental illness (MI) and/or mental retardation (MR); to see that they are placed appropriately, whether in NFs or in the community; and to ensure that they receive the services they need, wherever they are placed. Many states currently run PASRR programs that are poorly implemented or do not comply with federal regulations. To help states improve their programs, the project team established the PASRR Technical Assistance Center (PTAC), which includes a group of expert consultants. Mission Analytics Group facilitates discussions and meetings between PTAC consultants, CMS staff, and state staff; facilitates CMS Regional PASRR calls and training; maintains a website; conducts a monthly series of webinars; and develops technical assistance materials both for states and for CMS.   See the project website <http://www.pasrrassist.org/>.

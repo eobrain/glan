@@ -13,7 +13,7 @@ Mission Analytics Group
 July 2012:
 ----------
 
-Mission Analytics Group is the evaluator for the San Francisco Family Resource Center (FRC) Initiative, funded by First 5 San Francisco, the San Francisco Human Services Agency and the Department for Children, Youth and Their Families.  The second year evaluation report examines the scope of FRC activities and their effect on family engagement, family functioning, parenting skills and reunification of children in foster care.   The report can be found here http://www.first5sf.org/downloads/11_frc_fr.pdf. 
+Mission Analytics Group is the evaluator for the San Francisco Family Resource Center (FRC) Initiative, funded by First 5 San Francisco, the San Francisco Human Services Agency and the Department for Children, Youth and Their Families.  The second year evaluation report examines the scope of FRC activities and their effect on family engagement, family functioning, parenting skills and reunification of children in foster care.   The report can be found here <http://www.first5sf.org/downloads/11_frc_fr.pdf>. 
 
 February 2012:
 -------------
