@@ -4,23 +4,44 @@ $ ->
   $children = $ '#children'
   $nav      = $ ".nav"
 
-  currentPage = ( ->
-    currentPageId = 'home'
+  #BEGIN dingleton
+  currentPage = new ( ->
 
-    changePageTo = (newPageId) ->
+    fromHash = () ->
+       window.location.hash.substring 1
+
+    currentPageId = fromHash()
+
+    # go to home if no hash
+    if !currentPage
+      window.location.hash = '#home'
+      currentPageId = fromHash()
+
+    undisplay = ->
       $('.page-'+currentPageId).removeClass 'current'
       $('#menu-'+currentPageId).removeClass 'active'
-      currentPageId = newPageId
+
+    display = ->
       $('.page-'+currentPageId).addClass 'current'
       $('#menu-'+currentPageId).addClass 'active'
+
+    changePageTo = (newPageId) ->
+      undisplay()
+      currentPageId = newPageId
+      display()
 
     $(window).on 'hashchange', ->
       changePageTo window.location.hash.substring 1
 
-    window.location.hash = '#'+currentPageId
-    changePageTo currentPageId
+    #end private, begin public
 
-  )()
+    @displayIf = (pageId) ->
+      if pageId == currentPageId
+        display()
+
+    null
+  )
+  #END singleton
 
 
   fetchPage = (pageId, children) ->
@@ -36,9 +57,10 @@ $ ->
       $children.append list
 
 
-
+  # Recursive funtion to walk down the structure.json tree
   walkStructure = (pageId, children) ->
     fetchPage pageId, children
+    currentPage.displayIf pageId
     for childId, grandchildren of children
       do (childId, grandchildren) ->
         walkStructure childId, grandchildren
