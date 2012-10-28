@@ -44,17 +44,28 @@ $ ->
   #END singleton
 
 
-  fetchPage = (pageId, children) ->
-    $content.append "<article class='page-#{pageId}'></article>"
-    $page = $ '.page-'+pageId
-    $.get "site/pages/#{ pageId }.txt", (md) ->
-      $page.append markdown.toHTML md
-      list = "<nav class='page-#{pageId}'><ul>"
+  loadMarkDown = (url, $element) ->
+    $.get url, (md) ->
+      $element.append markdown.toHTML md
+      list = "<nav class='page-#{pageId}'><ul class='well'>"
       for childId of children
         do (childId) ->
           list += "<li><a href='##{ childId }'>#{ childId }</a></li>"
       list += '</ul></nav>'
       $children.append list
+
+  fetchPage = (pageId, children) ->
+    $content.append "<article class='page-#{pageId}'></article>"
+    $page = $ '.page-'+pageId
+    loadMarkDown "site/pages/#{ pageId }.txt", $page
+    #$.get "site/pages/#{ pageId }.txt", (md) ->
+    #  $page.append markdown.toHTML md
+    list = "<nav class='page-#{pageId}'><ul class='well'>"
+    for childId of children
+      do (childId) ->
+        list += "<li><a href='##{ childId }'>#{ childId }</a></li>"
+    list += '</ul></nav>'
+    $children.append list
 
 
   # Recursive funtion to walk down the structure.json tree
@@ -77,5 +88,7 @@ $ ->
   $.getJSON 'site/structure.json', (structure) ->
     setupTopNav structure
     walkStructure 'home', structure
+
+  loadMarkDown 'site/footer.txt', $ '#footer'
 
 
