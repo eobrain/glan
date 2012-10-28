@@ -3,6 +3,7 @@ $ ->
   $content  = $ '#content'
   $children = $ '#children'
   $nav      = $ ".nav"
+  $footer   = $ 'footer'
 
   #BEGIN dingleton
   currentPage = new ( ->
@@ -21,9 +22,18 @@ $ ->
       $('.page-'+currentPageId).removeClass 'current'
       $('#menu-'+currentPageId).removeClass 'active'
 
+    #fixFooter = ->
+    #  console.log $(window).height()
+    #  console.log $(document).height()
+    #  if $(window).height() < $(document).height()
+    #    $footer.addClass 'at-bottom'
+    #  else
+    #    $footer.removeClass 'at-bottom'
+
     display = ->
       $('.page-'+currentPageId).addClass 'current'
       $('#menu-'+currentPageId).addClass 'active'
+      #window.setTimeout fixFooter, 1
 
     changePageTo = (newPageId) ->
       undisplay()
@@ -47,12 +57,6 @@ $ ->
   loadMarkDown = (url, $element) ->
     $.get url, (md) ->
       $element.append markdown.toHTML md
-      list = "<nav class='page-#{pageId}'><ul class='well'>"
-      for childId of children
-        do (childId) ->
-          list += "<li><a href='##{ childId }'>#{ childId }</a></li>"
-      list += '</ul></nav>'
-      $children.append list
 
   fetchPage = (pageId, children) ->
     $content.append "<article class='page-#{pageId}'></article>"
