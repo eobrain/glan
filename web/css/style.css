@@ -16,8 +16,14 @@ h2 {
     line-height: 1em;
 }
 
-#sidebar {
+#sidebar, #children nav {
   height: 40em;
+}
+
+nav li {
+    white-space:nowrap;
+    overflow: hidden;
+    padding: 1em;
 }
 
 /*.at-bottom {

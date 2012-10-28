@@ -54,20 +54,27 @@ $ ->
   #END singleton
 
 
-  loadMarkDown = (url, $element) ->
+
+  loadMarkDown = (url, $element, pageId) ->
     $.get url, (md) ->
       $element.append markdown.toHTML md
+      if pageId
+        title = $(".page-#{ pageId } h1").text()
+        if title
+          $('.title-'+pageId).text title
+
+
+  link = (pageId) ->
+    "<a class='title-#{ pageId }' href='##{ pageId }'>#{ pageId }</a>"
 
   fetchPage = (pageId, children) ->
     $content.append "<article class='page-#{pageId}'></article>"
     $page = $ '.page-'+pageId
-    loadMarkDown "site/pages/#{ pageId }.txt", $page
-    #$.get "site/pages/#{ pageId }.txt", (md) ->
-    #  $page.append markdown.toHTML md
-    list = "<nav class='page-#{pageId}'><ul class='well'>"
+    loadMarkDown "site/pages/#{ pageId }.txt", $page, pageId
+    list = "<nav class='well page-#{pageId}'><ul>"
     for childId of children
       do (childId) ->
-        list += "<li><a href='##{ childId }'>#{ childId }</a></li>"
+        list += "<li>#{ link childId }</li>"
     list += '</ul></nav>'
     $children.append list
 
@@ -83,7 +90,7 @@ $ ->
   setupTopNav = (home) ->
     for childId of home
       do (childId) ->
-        ($nav.append "<li><a href='##{ childId }'>#{ childId }</li>").click () ->
+        ($nav.append "<li>#{ link childId }</li>").click () ->
 
 
   $.getJSON 'site/config.json', (config) ->
