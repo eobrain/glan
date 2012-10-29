@@ -16,9 +16,9 @@ h2 {
     line-height: 1em;
 }
 
-#sidebar, #children nav {
+/*#sidebar, #children nav {
   height: 40em;
-}
+}*/
 
 nav li {
      padding: 0.5em;
