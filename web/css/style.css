@@ -21,9 +21,7 @@ h2 {
 }
 
 nav li {
-    white-space:nowrap;
-    overflow: hidden;
-    padding: 1em;
+     padding: 0.5em;
 }
 
 /*.at-bottom {

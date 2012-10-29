@@ -1,3 +1,8 @@
+###
+# This file is part of the Glan CMS systemm.
+# (c) Eamonn O'Brien-Strain  e@obrain.com
+###
+
 $ ->
 
   $content  = $ '#content'
@@ -5,7 +10,7 @@ $ ->
   $nav      = $ ".nav"
   $footer   = $ 'footer'
 
-  #BEGIN dingleton
+  #BEGIN singleton handle page navigation
   currentPage = new ( ->
 
     fromHash = () ->
@@ -71,12 +76,13 @@ $ ->
     $content.append "<article class='page-#{pageId}'></article>"
     $page = $ '.page-'+pageId
     loadMarkDown "site/pages/#{ pageId }.txt", $page, pageId
-    list = "<nav class='well page-#{pageId}'><ul>"
-    for childId of children
-      do (childId) ->
-        list += "<li>#{ link childId }</li>"
-    list += '</ul></nav>'
-    $children.append list
+    if pageId != 'home' && _.size(children) > 0
+      list = "<nav class='well page-#{pageId}'><ul>"
+      for childId of children
+        do (childId) ->
+          list += "<li>#{ link childId }</li>"
+      list += '</ul></nav>'
+      $children.append list
 
 
   # Recursive funtion to walk down the structure.json tree
