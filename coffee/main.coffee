@@ -77,26 +77,24 @@ $ ->
     $page = $ '.page-'+pageId
     loadMarkDown "site/pages/#{ pageId }.txt", $page, pageId
     if pageId != 'home' && _.size(children) > 0
-      list = "<nav class='well page-#{pageId}'><ul>"
-      for childId of children
-        do (childId) ->
-          list += "<li>#{ link childId }</li>"
-      list += '</ul></nav>'
-      $children.append list
+      lis = _.map children, (grandChildren, childId) ->
+        "<li>#{ link childId }</li>"
+      cat = _.reduce  lis, ((list,item) -> list+item),  ''
+      $children.append "<nav class='well page-#{pageId}'><ul>"+cat+'</ul></nav>'
 
 
   # Recursive funtion to walk down the structure.json tree
   walkStructure = (pageId, children) ->
     fetchPage pageId, children
     currentPage.displayIf pageId
-    for childId, grandchildren of children
-      do (childId, grandchildren) ->
-        walkStructure childId, grandchildren
+    _.each children, (grandChildren, childId) ->
+      walkStructure childId, grandChildren
 
   setupTopNav = (home) ->
-    for childId of home
-      do (childId) ->
+    _.each home, (grandChildren, childId) ->
         ($nav.append "<li>#{ link childId }</li>").click () ->
+          #$('#title='+childId).addClass 'active'
+          $('.title-'+childId).addClass 'active'
 
 
   $.getJSON 'site/config.json', (config) ->
