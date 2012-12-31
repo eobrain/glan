@@ -10,9 +10,12 @@ $ ->
   $nav      = $ ".nav"
   $footer   = $ 'footer'
 
+  ajaxCache = true
+
   #BEGIN singleton handle page navigation
   currentPage = new ( ->
 
+    #get string following hash
     fromHash = () ->
        window.location.hash.substring 1
 
@@ -61,12 +64,15 @@ $ ->
 
 
   loadMarkDown = (url, $element, pageId) ->
-    $.get url, (md) ->
-      $element.append markdown.toHTML md
-      if pageId
-        title = $(".page-#{ pageId } h1").text()
-        if title
-          $('.title-'+pageId).text title
+    $.ajax
+      url:     url
+      cache:   ajaxCache
+      success: (md) ->
+        $element.append markdown.toHTML md
+        if pageId
+          title = $(".page-#{ pageId } h1").text()
+          if title
+            $('.title-'+pageId).text title
 
 
   link = (pageId) ->
@@ -99,11 +105,10 @@ $ ->
 
   $.getJSON 'site/config.json', (config) ->
     $('head title').text config.title
+    ajaxCache = config.ajaxCache
 
   $.getJSON 'site/structure.json', (structure) ->
     setupTopNav structure
     walkStructure 'home', structure
 
   loadMarkDown 'site/footer.txt', $ '#footer'
-
-
