@@ -1,3 +1,6 @@
+BUCKET=www-s3-staging.missionanalyticsgroup.com
+REGION=us-west-1
+
 watch:
 	coffee --watch --compile --output web/js coffee/*.coffee
 
@@ -9,7 +12,8 @@ server: compile
 	cd web; python -m SimpleHTTPServer 4444
 
 deploy: compile
-	s3cmd --config=s3.config '--add-header=Cache-Control:public max-age=60' --acl-public --exclude=\*~ sync web/ s3://www-s3-staging.missionanalyticsgroup.com
+	s3cmd --config=s3.config '--add-header=Cache-Control:public max-age=60' --acl-public --exclude=\*~ sync web/ s3://$(BUCKET)
+	: view website at http://s3-$(REGION).amazonaws.com/$(BUCKET)/index.html#home
 
 web/site/rotimg/images.json: web/site/rotimg/*.jpg
 	echo "[" > $@
@@ -25,6 +29,3 @@ dependencies:
 	s3cmd --config=s3.config --configure
 
 
-
-#
-# "max-age=7200, must-revalidate"
