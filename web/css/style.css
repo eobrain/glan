@@ -28,3 +28,11 @@ nav li {
     position: fixed;
     bottom: 0;
 }*/
+
+#rotimg-odd, #rotimg-even {
+    position: absolute;
+}
+
+#rotimg {
+    height: 850px;
+}
