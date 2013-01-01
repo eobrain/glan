@@ -1,4 +1,5 @@
-BUCKET=www-s3-staging.missionanalyticsgroup.com
+#BUCKET=www-s3-staging.missionanalyticsgroup.com
+BUCKET=www.missionanalyticsgroup.com
 REGION=us-west-1
 
 watch:
@@ -13,7 +14,7 @@ server: compile
 
 deploy: compile
 	s3cmd --config=s3.config '--add-header=Cache-Control:public max-age=60' --acl-public --exclude=\*~ sync web/ s3://$(BUCKET)
-	: view website at http://s3-$(REGION).amazonaws.com/$(BUCKET)/index.html#home
+	: view website at http://s3-$(REGION).amazonaws.com/$(BUCKET)
 
 web/site/rotimg/images.json: web/site/rotimg/*.jpg
 	echo "[" > $@

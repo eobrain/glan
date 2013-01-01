@@ -38,6 +38,23 @@ Markdown format in
 
 ## Setup and Administration
 
-Install from <https://github.com/eobrain/glan> 
+The following instructions assume you are using a Linux machine, and
+will mosly be valid also on a Mac.  If you have a Windows machine, you
+will probably want to install Cygwin to get a Unix-like command line.
+
+Download or fork from <https://github.com/eobrain/glan> 
 
 [More instructions coming soon ...]
+
+### Deploying to Amazon S3
+
+1. Create an Amazon AWS account if you don't already have one
+2. In your browser go to the AWS console and go to the S3 area.
+3. Create a bucket called, for example `www.mydomain.com`, and choose
+a region, for example `us-west-1`
+4. In the Properties, enable Static Website Hosting and set the Index
+Document to `index.html`
+5. Open the `Makefile` file in a text editor and modify the following
+at the top of the file:
+    1. set the `BUCKET` variable to your S3 bucket name
+    2. set the `REGION` variable to the region of your bucket 
