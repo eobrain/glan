@@ -38,8 +38,10 @@ $ ->
     # BEGIN private functions
 
     undisplay = ->
-      $('.page-'+currentPageId).removeClass 'current'
-      $('#menu-'+currentPageId).removeClass 'active'
+      $('.page-'+currentPageId).slideUp 600, ->
+        $(@).removeClass 'current'
+      $('#menu-'+currentPageId).slideUp 600, ->
+        $(@).removeClass 'active'
 
     #fixFooter = ->
     #  console.log $(window).height()
@@ -50,8 +52,10 @@ $ ->
     #    $footer.removeClass 'at-bottom'
 
     display = ->
-      $('.page-'+currentPageId).addClass 'current'
-      $('#menu-'+currentPageId).addClass 'active'
+      $('.page-'+currentPageId).slideDown 600, ->
+        $(@).addClass 'current'
+      $('#menu-'+currentPageId).slideDown 600, ->
+        $(@).addClass 'active'
       #window.setTimeout fixFooter, 1
 
     # Display the given page

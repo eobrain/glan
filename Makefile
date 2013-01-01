@@ -1,5 +1,5 @@
-#BUCKET=www-s3-staging.missionanalyticsgroup.com
-BUCKET=www.missionanalyticsgroup.com
+BUCKET=www-s3-staging.missionanalyticsgroup.com
+#BUCKET=www.missionanalyticsgroup.com
 REGION=us-west-1
 
 watch:
