@@ -74,7 +74,7 @@ $ ->
 
 
     # go to home if no hash
-    if !currentPage
+    if !currentPageId
       window.location.hash = '#home'
       currentPageId = fromHash()
 
