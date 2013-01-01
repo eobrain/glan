@@ -48,6 +48,23 @@ Download or fork from <https://github.com/eobrain/glan>
 
 ### Deploying to Amazon S3
 
+Prerequisites
+
+* A Unix-like command line shell, such as on Linux, Mac, or Cygwin
+* `make`, which is likely already installed on your Unix-like system
+* `s3cmd` for command-line copying to S3.
+* `python` for running a local test Web server
+* `coffeescript` for generating JavaScript
+
+
+On Ubuntu and similar Linux systems you can install necessary
+dependencies by doing
+
+    sudo apt-get install s3cmd
+        
+
+Step-by step:
+
 1. Create an Amazon AWS account if you don't already have one
 2. In your browser go to the AWS console and go to the S3 area.
 3. Create a bucket called, for example `www.mydomain.com`, and choose
@@ -58,3 +75,32 @@ Document to `index.html`
 at the top of the file:
     1. set the `BUCKET` variable to your S3 bucket name
     2. set the `REGION` variable to the region of your bucket 
+6. Open a command-line shell and `cd` to your Glan directory
+7. If this is the first time using `s3cmd` with your AWS account in
+the current Glan installation, do
+
+        make config
+        
+    and enter in your Amazon S3 access key and secret key.  You can
+    probably accept all the other defaults if you are deploying what
+    will become a public website, except choose "n" to save the
+    configuration to the local file `s3.config`.  (Be careful to
+    secure this file because whoever has this file can overwrite your
+    website.)
+8. Copy your dite to the bucket with
+
+        make deploy
+
+9. In your browser view the URL printed out by the previous command,
+and verify that you can see your site
+10. Now you have three choices:
+    1. Use the above Amazon domain for your web site
+    2. Use DNS to setup a CNAME entry pointing from a domain of your
+    own to the S3 domain.  This must match the bucket name, so for
+    example if your bucket is `www.mydomain.com` you must add a CNAME
+    entry for `www` to your `mydomain.com` domain, pointing to
+    `s3-_region_.amazonaws.com`
+    3. Set up a download Cloudfront distribution whose origin is the
+    above S3 bucket, with a CNAME of a subdomain whose DNS you
+    control, and with a default root object of `index.html`.  Then
+    configure your DNS CNAME to point to the created distribution domain.
