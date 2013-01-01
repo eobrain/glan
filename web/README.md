@@ -1,63 +1,39 @@
-# [HTML5 Boilerplate](http://html5boilerplate.com)
+# Glan
 
-HTML5 Boilerplate is a professional front-end template for building fast,
-robust, and adaptable web apps or sites.
+Glan (Irish for "clean", pronounced /_glawn_/) is an extremely simple way to build a web site.
 
-This project is the product of many years of iterative development and combined
-community knowledge. It does not impose a specific development philosophy or
-framework, so you're free to architect your code in the way that you want.
-
-* Source: [https://github.com/h5bp/html5-boilerplate](https://github.com/h5bp/html5-boilerplate)
-* Homepage: [http://html5boilerplate.com](http://html5boilerplate.com)
-* Twitter: [@h5bp](http://twitter.com/h5bp)
-
-
-## Quick start
-
-Choose one of the following options:
-
-1. Download the latest stable release from
-   [html5boilerplate.com](http://html5boilerplate.com/) or a custom build from
-   [Initializr](http://www.initializr.com).
-2. Clone the git repo — `git clone
-   https://github.com/h5bp/html5-boilerplate.git` - and checkout the tagged
-   release you'd like to use.
+* Source: <https://github.com/eobrain/glan>
+* Homepage: <http://glawn.org>
 
 
 ## Features
 
-* HTML5 ready. Use the new elements with confidence.
-* Cross-browser compatible (Chrome, Opera, Safari, Firefox 3.6+, IE6+).
-* Designed with progressive enhancement in mind.
-* Includes [Normalize.css](http://necolas.github.com/normalize.css/) for CSS
-  normalizations and common bug fixes.
-* The latest [jQuery](http://jquery.com/) via CDN, with a local fallback.
-* The latest [Modernizr](http://modernizr.com/) build for feature detection.
-* IE-specific classes for easier cross-browser control.
-* Placeholder CSS Media Queries.
-* Useful CSS helpers.
-* Default print CSS, performance optimized.
-* Protection against any stray `console.log` causing JavaScript errors in
-  IE6/7.
-* An optimized Google Analytics snippet.
-* Apache server caching, compression, and other configuration defaults for
-  Grade-A performance.
-* Cross-domain Ajax and Flash.
-* "Delete-key friendly." Easy to strip out parts you don't need.
-* Extensive inline and accompanying documentation.
+* Extremely fast
+* Fully static, so can be served out of cheap cloud storage from
+  Amazon or S3 (and optionally served through a CDN for worldwide speed)
+* Markdown page authoring, so no HTML knowledge required
+* Structured hierarchically
+* Styled with Twitter Bootstrap
+
+## Authoring
+
+To modify an existing Glan web site. you will need to make changes as follows
+
+1. Edit the file [web/site/config.json](site/config.json) to set the
+title of the web site and other properties.
+2. Replace the image [web/site/logo.png](site/logo.png) with your logo
+3. Edit the file [web/site/footer.txt](site/footer.txt) to set the
+text that goes on the bottom ofeach page.
+4. Edit the file [web/site/structure.json](site/structure.json) to
+specify all the pages in your web site and how they are arranged
+hierarchically.
+5. For every entry in the `structure.json` add a `.txt` file in
+Markdown format in
+[web/site/pages/](site/pages/).  For example
+[web/site/pages/home.txt](site/pages/home.txt) is the home page. 
+6. Specify rotating images in [web/site/rotimg/](site/rotimg/)
 
 
-## Documentation
+## Setup and Administration
 
-Take a look at the [documentation table of
-contents](/h5bp/html5-boilerplate/blob/master/doc/TOC.md). This
-documentation is bundled with the project, which makes it readily available for
-offline reading and provides a useful starting point for any documentation
-you want to write about your project.
-
-
-## Contributing
-
-Anyone and everyone is welcome to
-[contribute](/h5bp/html5-boilerplate/blob/master/CONTRIBUTING.md). Hundreds
-of developers have helped make the HTML5 Boilerplate what it is today.
+[...]

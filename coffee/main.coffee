@@ -5,26 +5,37 @@
 
 $ ->
 
-  $content  = $ '#content'
-  $children = $ '#children'
-  $nav      = $ ".nav"
-  $footer   = $ 'footer'
+  #get string following hash
+  fromHash = () ->
+     window.location.hash.substring 1
 
+  #Container for all the articles (only one showing at a time)
+  $content  = $ '#content'
+
+  #Cointainer for the nav sections for each article (only one showing at a time)
+  $children = $ '#children'
+
+  $nav      = $ ".nav"
+  #$footer   = $ 'footer'
+
+  #Default to caching AJAX fetched (may override in site/config.json when authoring pages)
   ajaxCache = true
 
-  #BEGIN singleton handle page navigation
+
+
+
+  ############################################################
+  # BEGIN singleton that handles page navigation
   currentPage = new ( ->
 
-    #get string following hash
-    fromHash = () ->
-       window.location.hash.substring 1
+    #--------------------------------------
+    # BEGIN private fields
 
     currentPageId = fromHash()
 
-    # go to home if no hash
-    if !currentPage
-      window.location.hash = '#home'
-      currentPageId = fromHash()
+    # END private fields
+    #--------------------------------------
+    # BEGIN private functions
 
     undisplay = ->
       $('.page-'+currentPageId).removeClass 'current'
@@ -43,23 +54,41 @@ $ ->
       $('#menu-'+currentPageId).addClass 'active'
       #window.setTimeout fixFooter, 1
 
+    # Display the given page
     changePageTo = (newPageId) ->
       undisplay()
       currentPageId = newPageId
       display()
 
-    $(window).on 'hashchange', ->
-      changePageTo window.location.hash.substring 1
-
-    #end private, begin public
+    # END private functions
+    #--------------------------------------
+    # BEGIN public functions
 
     @displayIf = (pageId) ->
       if pageId == currentPageId
         display()
 
+    # END public functions
+    #--------------------------------------
+    # BEGIN constructor
+
+
+    # go to home if no hash
+    if !currentPage
+      window.location.hash = '#home'
+      currentPageId = fromHash()
+
+
+    $(window).on 'hashchange', ->
+      changePageTo window.location.hash.substring 1
+
+    # END constructor
+    #--------------------------------------
+
     null
   )
-  #END singleton
+  # END singleton
+  ############################################################
 
 
 
@@ -99,7 +128,6 @@ $ ->
   setupTopNav = (home) ->
     _.each home, (grandChildren, childId) ->
         ($nav.append "<li>#{ link childId }</li>").click () ->
-          #$('#title='+childId).addClass 'active'
           $('.title-'+childId).addClass 'active'
 
 
@@ -112,3 +140,4 @@ $ ->
     walkStructure 'home', structure
 
   loadMarkDown 'site/footer.txt', $ '#footer'
+  loadMarkDown 'README.md',       $ '.page-GLAN'
