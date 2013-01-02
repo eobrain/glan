@@ -38,9 +38,9 @@ $ ->
     # BEGIN private functions
 
     undisplay = ->
-      $('.page-'+currentPageId).slideUp 600, ->
+      $('.page-'+currentPageId).slideUp 'fast', ->
         $(@).removeClass 'current'
-      $('#menu-'+currentPageId).slideUp 600, ->
+      $('#menu-'+currentPageId).slideUp 'fast', ->
         $(@).removeClass 'active'
 
     #fixFooter = ->
@@ -52,9 +52,9 @@ $ ->
     #    $footer.removeClass 'at-bottom'
 
     display = ->
-      $('.page-'+currentPageId).slideDown 600, ->
+      $('.page-'+currentPageId).slideDown 'fast', ->
         $(@).addClass 'current'
-      $('#menu-'+currentPageId).slideDown 600, ->
+      $('#menu-'+currentPageId).slideDown 'fast', ->
         $(@).addClass 'active'
       #window.setTimeout fixFooter, 1
 
