@@ -15,7 +15,7 @@ Drupal or Wordpress.
 * Markdown page authoring, so no HTML knowledge required
 * Structured hierarchically
 * Styled with Twitter Bootstrap
-* Open source, so customizable and free forever (See [LICENSE](LICENSE.md))
+* Open source, so customizable and free forever (See LICENSE.md)
 
 
 
