@@ -1,6 +1,0 @@
-Family Resource Center Initiative Evaluation
-============================================
-
-Client: First Five Children and Families Commission of San Francisco
-
-Mission Analytics Group currently serves as the evaluator for the Family Resource Center (FRC) Initiative undertaken by the First Five Commission of the City and County of San Francisco. Implemented in 2009, the Initiative aims to improve the provision of social services to low-income San Francisco families, especially in the domain of parenting skills. Project activities include data analyses linking demographic and participation information from First 5 to child welfare data.  In addition to creating databooks for the 22 funded FRCs, the evaluation is examining the impact of participation on child welfare outcomes (reunification, subsequent maltreatment), as well as the effectiveness of different combinations of program activities.    

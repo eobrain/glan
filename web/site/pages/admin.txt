@@ -1,0 +1,9 @@
+# Setup and Administration
+
+The following instructions assume you are using a Linux machine, and
+will mosly be valid also on a Mac.  If you have a Windows machine, you
+will probably want to install Cygwin to get a Unix-like command line.
+
+Download or fork from <https://github.com/eobrain/glan> 
+
+[More instructions coming soon ...]

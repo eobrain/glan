@@ -1,6 +1,0 @@
-Santa Clara County Children of Color Project (Child Welfare)
-============================================================
-
-Client:  Santa Clara County Social Services Agency, Department of Family and Children's Services (DFCS)
-
-In a series of linked projects, Mission Analytics Group, Inc. has been working with the Santa Clara DFCS to explore issues of potential disproportionate treatment of racial/ethnic minorities in the child welfare system.   Using data from risk assessments and the Child Welfare Services Case Management System (CWS/CMS), the analyses use non-linear regression analysis to explore topics such as: after substantiating child abuse, is DFCS more likely to open cases for children of color than for otherwise similar white children (with a special focus on Hispanic children with substantiated general neglect allegations), and do children of color find permanent placement more slowly than other similar white children.  In doing so, the analyses also explore the risk factors associated with more intensive child welfare involvement and the incidence of these risk factors among children of color compared to white children.  

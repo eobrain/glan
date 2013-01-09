@@ -1,6 +1,0 @@
-Factors that Impact AIDS Drug Assistance Program (ADAP) Enrollment Management in the Face of ADAP Waiting Lists
-=========================================
-
-Client: HIV/AIDS Bureau, Health Resources and Services Administration (HRSA/HAB)
-
-Mission Analytics Group, as a subcontractor to Walter R. McDonald & Associates, Inc., is studying states’ use of waiting lists and other cost-containment strategies to manage their AIDS Drug and Assistance Programs (ADAPs).   This mixed-methods project is examining the use of waiting lists and other cost-containment strategies and potential opportunities for ADAPs to more effectively serve clients and avoid reliance on such options.  The quantitative analysis assembles data on ADAP expenditures, demographics, epidemiology, health insurance and economic conditions to determine the factors that drive demand for ADAP and how these differ between waitlist and non-waitlist states.  The qualitative component will conduct site visits with eight states to examine ADAP management practices, budget forecasting, the use of waitlists and other cost containment practices, to identify best practices and potential strategies to improve efficiency in states turning to waitlists. 

@@ -1,3 +1,8 @@
-Our Team
-========
+Team
+====
 
+The development team for Glan is currently quite small, and uses
+[Pivotal Tracker] [1] for agile-style specifications and project management.
+
+
+[1]: https://www.pivotaltracker.com/projects/676295

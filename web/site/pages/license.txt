@@ -1,4 +1,5 @@
-# Licenses
+Licenses
+========
 
 Glan an open source project.
 
@@ -11,8 +12,14 @@ open source licenses but retains the copyright of its creator.
 
 Glan includes code from the following projects, each according to its
 own license
+
 * [HTML5 Boilerplate] [h5b] ([Licence] [5lic])
 * [Twitter Bootstrap] [boo] ([Apache License, Version 2.0] [apa])
+
+Photo Credit
+------------
+Thanks to Giovanni Orlando for providing [his photo] [ph] with a
+Creative Commons license
 
 
 [epl]:  http://www.eclipse.org/legal/epl-v10.html
@@ -21,3 +28,4 @@ own license
 [boo]:  http://twitter.github.com/bootstrap/
 [apa]:  http://www.apache.org/licenses/LICENSE-2.0
 [site]: web/site/
+[ph]:   http://www.flickr.com/photos/jjjohn/2387534678/

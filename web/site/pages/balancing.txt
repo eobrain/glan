@@ -1,6 +1,0 @@
-Balancing Incentive Payments Program - No Wrong Door Initiative Technical Assistance (Medicaid)
-===============================================================================================
-
-Client: Centers for Medicaid and Medicaid Services (CMS)
-
-Mission Analytics Group, under subcontract to Acumen, LLC, wrote the manual for and serves as the technical assistance contractor for CMS’s Balancing Incentive Program, an Affordable Care Act initiative that provides incentives to states to rebalance their long-term services and supports (LTSS) systems toward community-based care. Participating states must implement three structural changes: a No Wrong Door/Single Entry Point (NWD/SEP) System for enrollment into community LTSS; a Core Standardized Assessment (CSA); and conflict-free case management.  See the website at <http://www.balancingincentiveprogram.org/>.

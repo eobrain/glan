@@ -1,4 +1,5 @@
 {
-    "title": "Mission Analytics Group",
-    "ajaxCache": true
+    "title":     "Glan",
+    "logo":      "site/2387534678_153f52cfc8_m.jpg",
+    "ajaxCache":  false
 }

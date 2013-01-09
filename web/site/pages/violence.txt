@@ -1,7 +1,0 @@
-Violence Prevention and Intervention Initiative and Youth Workforce Development-High Risk Youth Evaluation
-=================
-
-
-Client: San Francisco Department of Children, Youth and Their Families (DCYF)
-
-Mission Analytics Group is currently the evaluator for the San Francisco Violence Prevention and Intervention Initiative and the San Francisco Youth Workforce Development program.  The mid-period evaluation report linked data from the DCYF Contract Management System and the Juvenile Justice Information System for the San Francisco Juvenile Probation Department to identify the characteristics of youth and young adults served by the programs, their success in reaching  juvenile-justice involved youth, and outcomes in terms of job placements and subsequent juvenile justice contact.   The final report will expand to additional data sets, such as school district data, adult probation and community behavioral health.    The evaluation will draw on statistical modeling and descriptive techniques, with the goal of identifying the activities and combinations of activities associated with higher probabilities of success.

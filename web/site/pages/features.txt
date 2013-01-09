@@ -1,0 +1,10 @@
+# Features
+
+* Extremely fast
+* Totally secure against hacking
+* Fully static, so can be served out of cheap cloud storage from
+  Amazon or S3 (and optionally served through a CDN for worldwide speed)
+* Markdown page authoring, so no HTML knowledge required
+* Structured hierarchically
+* Styled with Twitter Bootstrap
+* Open source, so customizable and free forever (See LICENSE.md)

@@ -1,0 +1,6 @@
+Mission Analytics Group
+=======================
+
+This was the original web site that prompted the development of Glan.
+
+> <http://www.missionanalyticsgroup.com>

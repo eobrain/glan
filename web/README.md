@@ -6,6 +6,8 @@ way to build a very fast, secure web site.
 Use it when you don't need the advanced features of a CMS such as
 Drupal or Wordpress.
 
+See [project on Github] [gh]
+
 ## Features
 
 * Extremely fast
@@ -17,3 +19,4 @@ Drupal or Wordpress.
 * Styled with Twitter Bootstrap
 * Open source, so customizable and free forever
 
+[gh]: https://github.com/eobrain/glan#readme

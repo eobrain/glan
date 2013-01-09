@@ -115,6 +115,13 @@ $ ->
           title = $(".page-#{ pageId } h1").text()
           if title
             $('.title-'+pageId).text title
+      error: (jqXHR, textStatus, errorThrown) ->
+        if jqXHR.status == 404
+          alert """
+Web site is misconfigured:
+  There is an entry for \"#{ pageId }\" in structure.json
+  but there is no file \"#{ url }\"
+"""
 
 
   link = (pageId) ->
@@ -146,6 +153,7 @@ $ ->
 
   $.getJSON 'site/config.json', (config) ->
     $('head title').text config.title
+    $('#logo').attr 'src', config.logo
     ajaxCache = config.ajaxCache
 
   $.getJSON 'site/structure.json', (structure) ->

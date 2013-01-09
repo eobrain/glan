@@ -12,8 +12,7 @@
 ###
 
 
-BUCKET=www-s3-staging.missionanalyticsgroup.com
-#BUCKET=www.missionanalyticsgroup.com
+BUCKET=www.glawn.org
 REGION=us-west-1
 
 watch:
@@ -33,6 +32,9 @@ config:
 	:
 	s3cmd --config=s3.config --configure
 
+config-hp:
+	hpcloud account:setup
+
 deploy: compile
 	s3cmd --config=s3.config '--add-header=Cache-Control:public max-age=60' --acl-public --exclude=\*~ sync web/ s3://$(BUCKET)
 	: view website at http://s3-$(REGION).amazonaws.com/$(BUCKET)/index.html
@@ -45,4 +47,12 @@ web/site/rotimg/images.json: web/site/rotimg/*.jpg
 dependencies:
 	sudo apt-get install s3cmd coffeescript python
 
+
+dependencies-hp:
+	sudo apt-get install ruby1.9.1 ruby1.9.1-dev 
+	curl -sL https://docs.hpcloud.com/file/hpfog-0.0.18.gem >/tmp/hpfog.gem
+	sudo gem install /tmp/hpfog.gem
+	curl -sL https://docs.hpcloud.com/file/hpcloud-1.4.0.gem >/tmp/hpcloud-1.4.0.gem
+	sudo gem install /tmp/hpcloud-1.4.0.gem
+	hpcloud info
 

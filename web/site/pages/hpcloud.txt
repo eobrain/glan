@@ -1,0 +1,28 @@
+Deploying to HP Cloud
+=====================
+
+Prerequisites
+-------------
+* A Unix-like command line shell, such as on Linux, Mac, or Cygwin
+* `make`, which is likely already installed on your Unix-like system
+* The [HP Cloud Unix command-line-interface] [1]
+* `python` for running a local test Web server
+* `coffeescript` for generating JavaScript
+
+On Ubuntu and similar Linux systems you can install necessary
+dependencies by doing
+
+    make dependencies-hp
+        
+
+
+Step by Step
+------------
+
+1. Create an HP Cloud account at <https://www.hpcloud.com/> if you
+don't already have one, and activate Object Storage
+2. Create a new container for your web site
+3. Click the button to activate the CDN (content distribution network) on this bucket
+
+
+[1]: https://docs.hpcloud.com/cli/unix/install/

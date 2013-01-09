@@ -1,33 +1,15 @@
 {
     "team":{
-        "peggy": {},
-        "jonathan": {},
-        "ed": {},
-        "ellie": {},
-        "nick": {},
-        "west": {},
-        "kira": {},
-        "vicky": {},
-        "aaron": {},
-        "mason": {}
+        "eamonn": {}
     },
-    "projects":{
-        "balancing": {},
-        "electronic": {},
-        "factors": {},
-        "family": {},
-        "hcbs": {},
-        "needs": {},
-        "pasrr": {},
-        "ab1326": {},
-        "risk": {},
-        "santaclara": {},
-        "adrc": {},
-        "violence": {}
+    "features": {},
+    "authoring": {},
+    "admin":{
+        "s3": {}
     },
-    "services":{},
-    "topics":{},
-    "careers":{
+    "sites":{
+        "glawn": {},
+        "miangr": {}
     },
-    "about":{}
+    "license":{}
 }

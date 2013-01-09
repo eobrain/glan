@@ -1,0 +1,13 @@
+Eamonn O'Brien-Strain
+=====================
+
+Eamonn built Glan after becoming frustrated with the security flaws
+and slow performance of Drupal, and the difficulty of a non-programmer
+to use a static website system such as Jekyll.
+
+You can find him online at:
+
+* [Twitter](https://twitter.com/eob)
+* [LinkedIn](http://www.linkedin.com/in/eobrain)
+* [Github](https://github.com/eobrain)
+* [HP](http://www.hpl.hp.com/people/eamonn_obrien-strain/)
