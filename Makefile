@@ -12,7 +12,7 @@
 ###
 
 
-BUCKET=www.glawn.org
+BUCKET=glawn.org
 REGION=us-west-1
 
 watch:
