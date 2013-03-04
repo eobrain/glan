@@ -1,18 +1,32 @@
-Authoring
-=========
+# Authoring
+
+## Synchronizing with S3 to a Windows PC
+
+If your administrator deployed your site on S3, then you must first copy the files to your local PC.
+
+1. Download and install an S3 client such as [Cloudberry Explorer][1]
+2. In the client, add an S3 account. Your administrator can give you the necessary _access key_ and _secret key_ and tell you which bucket contains the web site
+3. Use the client to sync the bucket with a folder on your PC, pulling the files from the cloud
+4. Edit the files as described in the next section.
+5. Sync again to push your changes to the cloud.
+6. The changes might not be immediately visible on the web site if your administrator has set up a content distribution network. To see your changes immediately look instead at the uncached URL for your S3 bucket which you administrator can give you. It will be a URL of the form http://_bucketname_.s3-website-_region_.amazonaws.com
+
+## Editing Files
 
 To modify an existing Glan web site. you will need to make changes as follows
 
-1. Edit the file [web/site/config.json](web/site/config.json) to set the
+1. Edit the file [site/config.json](site/config.json) to set the
 title of the web site and other properties.
-2. Replace the image [web/site/logo.png](web/site/logo.png) with your logo
-3. Edit the file [web/site/footer.txt](web/site/footer.txt) to set the
+3. Edit the file [site/footer.txt](site/footer.txt) to set the
 text that goes on the bottom of each page.
-4. Edit the file [web/site/structure.json](web/site/structure.json) to
+4. Edit the file [site/structure.json](site/structure.json) to
 specify all the pages in your web site and how they are arranged
 hierarchically.
 5. For every entry in the `structure.json` add a `.txt` file in
 Markdown format in
-[web/site/pages/](web/site/pages/).  For example
-[web/site/pages/home.txt](web/site/pages/home.txt) is the home page. 
-6. Specify rotating images in [web/site/rotimg/](web/site/rotimg/)
+[site/pages/](site/pages/). For example
+[site/pages/home.txt](site/pages/home.txt) is the home page. 
+6. Specify rotating images in [site/rotimg/](site/rotimg/)
+
+
+[1]: http://www.cloudberrylab.com/free-amazon-s3-explorer-cloudfront-IAM.aspx

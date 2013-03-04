@@ -39,6 +39,9 @@ deploy: compile
 	s3cmd --config=s3.config '--add-header=Cache-Control:public max-age=60' --acl-public --exclude=\*~ sync web/ s3://$(BUCKET)
 	: view website at http://s3-$(REGION).amazonaws.com/$(BUCKET)/index.html
 
+pull-from-site:
+	s3cmd --config=s3.config sync s3://$(BUCKET) web/ 
+
 web/site/rotimg/images.json: web/site/rotimg/*.jpg
 	echo "[" > $@
 	for jpg in web/site/rotimg/*.jpg; do echo " \"`basename $$jpg`\"," >> $@; done
