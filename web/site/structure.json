@@ -3,7 +3,9 @@
         "eamonn": {}
     },
     "features": {},
-    "authoring": {},
+    "authoring": {
+        "markdown":{}
+    },
     "admin":{
         "s3": {}
     },

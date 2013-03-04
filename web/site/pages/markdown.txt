@@ -1,0 +1,184 @@
+Markdown
+========
+
+Markdown is a simple text format for authoring basic web page text.
+If you search on the web you will probably find many different guides
+and tutorials for writing Markdown to supplement this simple guide.
+
+Editing Tools
+-------------
+
+You need a simple text editor.  If you have a Windows PC, you can use
+Wordpad which is included with Windows. (I do not recommend Notepad,
+because it has problems with "line-endings" which can cause formatting
+to mess up especially if you are sharing with people using Mac or
+Linux.)
+
+There are also some markdown-specific editors that you can download
+and try if you will be editing a lot of pages.
+
+
+Paragraphs
+----------
+
+You can type paragraphs just as you probably type e-mail, with a blank
+line between paragraphs.
+
+So for example I entered the two paragraphs in the previous section
+like so:
+
+    You need a simple text editor.  If you have a Windows PC, you can use
+    Wordpad which is included with Windows. (I do not recommend Notepad,
+    because it has problems with "line-endings" which can cause formatting
+    to mess up especially if you are sharing with people using Mac or
+    Linux.)
+
+    There are also some markdown-specific editors that you can download
+    and try if you will be editing a lot of pages.
+
+Headers
+-------
+
+You enter a main header by adding a row of equal signs under it.
+There should only be one main header on each page and it should be at
+the top.  So for example I entered the main header at the top of this
+page like so:
+
+    Markdown
+    ========
+
+You enter a sectiion header by adding a row of dashes under it.  So
+for example, here is how I entered the first section header above:
+
+    Editing Tools
+    -------------
+
+Lists
+-----
+
+To make a bullet list simply add a asterisk before each item. So for
+example:
+
+    * Lorem ipsum dolor sit amet
+    * Nunc eget malesuada lacus.
+    * Maecenas eu lobortis felis.
+
+Gives:
+
+* Lorem ipsum dolor sit amet
+* Nunc eget malesuada lacus.
+* Maecenas eu lobortis felis.
+
+Numbered lists are similar, but using a number followed by a dot.  So
+for example
+
+    1. Lorem ipsum dolor sit amet
+    2. Nunc eget malesuada lacus.
+    3. Maecenas eu lobortis felis.
+
+Gives:
+
+1. Lorem ipsum dolor sit amet
+2. Nunc eget malesuada lacus.
+3. Maecenas eu lobortis felis.
+
+Block Quote
+-----------
+
+You can block-quote some text by preceding each line with a
+greater-than character.  So for example:
+
+    > Proin feugiat, sapien et adipiscing elementum, sem diam feugiat
+    > arcu, nec aliquet nunc lorem nec elit. Sed pellentesque ultricies
+    > risus, sed mollis enim adipiscing at. Quisque congue faucibus odio.
+
+Gives 
+
+> Proin feugiat, sapien et adipiscing elementum, sem diam feugiat
+> arcu, nec aliquet nunc lorem nec elit. Sed pellentesque ultricies
+> risus, sed mollis enim adipiscing at. Quisque congue faucibus odio.
+
+Emphasizing Text
+----------------
+
+Some words surrounded by single asterisk will appear *like this*,
+while some words surrounded by two asterisks will appear **like
+this**.
+
+So for example I wrote the previous sentence like so:
+
+    A some words surrounded by single asterisk will appear *like this*,
+    while some words surrounded by two asterisks will appear **like
+    this**.
+
+
+Hyperlinks
+----------
+
+If you want to link to some other web page you put the name of the
+page in square brackets followed by the URL of the page in
+parentheses.  So for example:
+
+    [Google](http://www.google.com)
+
+gives
+
+[Google](http://www.google.com)
+
+If the page is another page on this web site then the URL can be
+shortened to just the "#" character followed by the page ID.  So for
+example
+
+    [Features of Glan](#features)
+
+gives
+
+[Features of Glan](#features)
+
+Images
+------
+
+The format for displaying an image is the same as a for a hyperlink,
+except you add an exclamation mark before it.
+
+So for example
+
+    ![Pink Punk Castro Street Accordionist](http://farm1.staticflickr.com/112/257941125_f9aface69c_t_d.jpg)
+
+gives 
+
+![Pink Punk Castro Street Accordionist](http://farm1.staticflickr.com/112/257941125_f9aface69c_t_d.jpg)
+
+The text in square brackets is generally invisible, but is important
+for accessibility so that blind people using a screen reader will be
+able to use your site.  The URL in parentheses is the link to the
+image file.
+
+But what if the image you want to show is not on the Web?  In that
+case you can upload the image to somewhere under the "site" folder and
+then link to it there, using just the local name.  For example, there
+is an image called "2387534678_153f52cfc8_m.jpg" in this site, so
+
+    ![Glan logo](site/2387534678_153f52cfc8_m.jpg)
+
+gives
+
+![Glan logo](site/2387534678_153f52cfc8_m.jpg)
+
+
+Example Pages
+-------------
+
+You can look at the markdown of the pages on this site for some
+examples
+
+* [features.txt](site/pages/features.txt) is the markdown for
+  [Features](#features) and contains a main header and a bullet list.
+* [eamonn.txt](site/pages/eamonn.txt) is the markdown for
+  [Eamonn O'Brien-Strain](#eamonn) and includes some paragraphs and hyperlinks
+
+
+
+
+
+

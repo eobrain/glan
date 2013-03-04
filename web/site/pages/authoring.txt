@@ -23,7 +23,7 @@ text that goes on the bottom of each page.
 specify all the pages in your web site and how they are arranged
 hierarchically.
 5. For every entry in the `structure.json` add a `.txt` file in
-Markdown format in
+[Markdown](#markdown) format in
 [site/pages/](site/pages/). For example
 [site/pages/home.txt](site/pages/home.txt) is the home page. 
 6. Specify rotating images in [site/rotimg/](site/rotimg/)

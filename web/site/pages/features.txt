@@ -1,4 +1,5 @@
-# Features
+Features
+========
 
 * Extremely fast
 * Totally secure against hacking
