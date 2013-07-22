@@ -16,14 +16,14 @@ BUCKET=glawn.org
 REGION=us-west-1
 
 watch:
-	coffee --watch --compile --output web/js coffee/*.coffee
+	coffee --watch --compile --output js coffee/*.coffee
 
-compile: web/site/rotimg/images.json
-	coffee         --compile --output web/js coffee/*.coffee
+compile: site/rotimg/images.json
+	coffee         --compile --output js coffee/*.coffee
 
 server: compile
 	: serving from http://localhost:4444
-	cd web; python -m SimpleHTTPServer 4444
+	python -m SimpleHTTPServer 4444
 
 config:
 	:
@@ -36,15 +36,15 @@ config-hp:
 	hpcloud account:setup
 
 deploy: compile
-	s3cmd --config=s3.config '--add-header=Cache-Control:public, max-age=600' --acl-public --exclude=\*~ sync web/ s3://$(BUCKET)
+	s3cmd --config=s3.config '--add-header=Cache-Control:public, max-age=600' --acl-public --exclude=\*~ sync ./ s3://$(BUCKET)
 	: view website at http://s3-$(REGION).amazonaws.com/$(BUCKET)/index.html
 
 pull-from-site:
-	s3cmd --config=s3.config sync s3://$(BUCKET) web/ 
+	s3cmd --config=s3.config sync s3://$(BUCKET) ./ 
 
-web/site/rotimg/images.json: web/site/rotimg/*.jpg
+site/rotimg/images.json: site/rotimg/*.jpg
 	echo "[" > $@
-	for jpg in web/site/rotimg/*.jpg; do echo " \"`basename $$jpg`\"," >> $@; done
+	for jpg in site/rotimg/*.jpg; do echo " \"`basename $$jpg`\"," >> $@; done
 	echo 'null]' >> $@
 
 dependencies:
