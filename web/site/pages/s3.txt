@@ -42,7 +42,7 @@ the current Glan installation, do
     configuration to the local file `s3.config`.  (Be careful to
     secure this file because whoever has this file can overwrite your
     website.)
-8. Copy your dite to the bucket with
+8. Copy your site to the bucket with
 
         make deploy
 

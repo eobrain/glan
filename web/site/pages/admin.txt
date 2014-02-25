@@ -1,9 +1,34 @@
-# Setup and Administration
+Setup and Administration
+========================
+
+Prerequisites
+-------------
 
 The following instructions assume you are using a Linux machine, and
-will mosly be valid also on a Mac.  If you have a Windows machine, you
-will probably want to install Cygwin to get a Unix-like command line.
+will be similar on a Mac.  If you have a Windows machine, you will
+probably want to install Cygwin to get a Unix-like command line.
+
+You will need a few packages installed on your machine if they are not
+already installed.  On Linux
+
+    sudo apt-get install coffeescript
+
+If you get an error about something not being found in the
+instructions below, installing the missing package with `apt-get` or
+the appropriate package manager for your platform.
+
+Download
+--------
 
 Download or fork from <https://github.com/eobrain/glan> 
+
+You should end up with a directory with a file called `Makefile`. To
+run s server locally open a shell, `cd` to that directory and execute
+
+    make server
+
+Then visit <http://localhost:4444> in your browser
+
+
 
 [More instructions coming soon ...]

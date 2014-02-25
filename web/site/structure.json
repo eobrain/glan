@@ -5,7 +5,8 @@
     "features": {},
     "authoring": {},
     "admin":{
-        "s3": {}
+        "s3": {},
+        "dev": {}
     },
     "sites":{
         "glawn": {},

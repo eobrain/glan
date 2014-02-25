@@ -1,0 +1,11 @@
+Development
+===========
+
+To run the unit tests
+
+    make test-compile server
+
+and visit [/test/SpecRunner.html](/test/SpecRunner.html)
+
+
+

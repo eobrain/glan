@@ -11,6 +11,15 @@
 #    Eamonn O'Brien-Strain  e@obrain.com - initial author
 ###
 
+assert = (cond) ->
+  value = cond()
+  msg = "#{cond} is #{value}"
+  if value
+    console.log "Assertion passed: #{msg}"
+  else
+    console.log "ASSERTION FAILED: #{msg}"
+
+
 $ ->
   parity = 0
   $imgs = [ $('#rotimg-odd'), $('#rotimg-even') ]
@@ -20,11 +29,23 @@ $ ->
       images.pop()
     n = images.length
     i = 0
+
     showImg = ->
-      $imgs[parity].fadeOut 'slow'
+      $imgOld = $imgs[parity]
+      $imgOld.fadeOut 600, ->
+        $imgOld.css 'display', 'none'
       parity = 1-parity
-      $imgs[parity].attr 'src', "#{ imgdir }/#{ images[i] }"
-      $imgs[parity].fadeIn 'slow'
+      $imgNew = $imgs[parity]
+      $imgNew.attr 'src', "#{ imgdir }/#{ images[i] }"
+      $imgNew.fadeIn 600
       i = (i+1) % n
+
+      #assert -> ($imgOld.css 'display')=='inline'
+      #assert -> ($imgNew.css 'display')=='none'
+      laterAssert = ->
+        console.log "TEST: #{$imgOld.attr 'id'} #{$imgOld.css 'display'} == 'none'"
+        assert -> ($imgOld.css 'display')=='none'
+      setTimeout laterAssert, 700
+
     showImg()
     $(window).on 'hashchange', showImg

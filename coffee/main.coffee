@@ -15,7 +15,7 @@
 $ ->
 
   #get string following hash
-  fromHash = () ->
+  fromHash = ->
      window.location.hash.substring 1
 
   #Container for all the articles (only one showing at a time)
