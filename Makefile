@@ -42,12 +42,13 @@ config-hp:
 	hpcloud account:setup
 
 deploy: compile
-	s3cmd --config=s3.config '--add-header=Cache-Control:public max-age=60' --acl-public --exclude=\*~ sync web/ s3://$(BUCKET)
+	s3cmd --config=s3.config '--add-header=Cache-Control:public, max-age=600' --acl-public --exclude=\*~ sync web/ s3://$(BUCKET)
 #	: view website at http://s3-$(REGION).amazonaws.com/$(BUCKET)/index.htm
 	: view website at http://$(BUCKET).s3-website-$(REGION).amazonaws.com
 
 pull-from-site:
 	s3cmd --dry-run --config=s3.config sync s3://$(BUCKET) web/ 
+#	s3cmd --config=s3.config sync s3://$(BUCKET) web/ 
 
 web/site/rotimg/images.json: web/site/rotimg/*.jpg
 	echo "[" > $@
