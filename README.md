@@ -62,7 +62,7 @@ Prerequisites
 On Ubuntu and similar Linux systems you can install necessary
 dependencies by doing
 
-    sudo apt-get install s3cmd
+    sudo apt-get install s3cmd coffeescript
         
 
 Step-by step:
